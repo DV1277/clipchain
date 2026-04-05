@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: clipchain-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: FRONTEND_URL
+        sync: false
+      - key: VULTR_API_KEY
+        sync: false
+      - key: TWELVELABS_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SOLANA_WALLET
+        sync: false
